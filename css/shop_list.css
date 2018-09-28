@@ -1,8 +1,9 @@
 .container{
     margin: 0 auto;
-    width: 1000px;
+    width: 800px;
 }
 .shopBox{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    float: left;
 }
