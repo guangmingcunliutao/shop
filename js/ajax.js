@@ -11,7 +11,7 @@ function sendAjax(url, options) {
         _default[attr] = options[attr];
     }
     // 如果是get方式请求，对url进行处理
-    if (_default.method.toLocaleUpperCase === 'GET') {
+    if (_default.method.toLocaleUpperCase() === 'GET') {
         // 解决get默认使用缓存资源文件问题，加时间戳，保证每次请求的url都不一样
         var sign = url.indexOf('?') > -1 ? "&" : "?";
         url += sign + '_=' + Date.now();
