@@ -4,6 +4,9 @@
 }
 .shopBox{
     width: 200px;
-    height: 200px;
     float: left;
+}
+img{
+    display: block;
+    width: 200px;
 }

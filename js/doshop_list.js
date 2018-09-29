@@ -29,6 +29,7 @@ var doshop_list = (function () {
             // 循环数据，生成一个商品div
             for (var i = 0; i < data.length; i++) {
                 arr.push(`<div class="shopBox">
+                                <img src="${data[i].img}">
                                 <p>商品名称：<span class="shop-name">${data[i].name}</span></p>
                                 <p>商品价格：<span class="shop-price">${data[i].price}</span></p>
                                 购买数量：<input type="number" class="shop-count" value="1">

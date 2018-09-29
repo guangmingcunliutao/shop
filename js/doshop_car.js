@@ -8,6 +8,8 @@ var shopCar = (function () {
         },
         event: function () {
             var _this = this;
+            this.$ele.addEventListener('input',this.eleInpFn,false);
+            this.$ele.addEventListener('click',this.eleCliFn,false);
         },
         // 获取json文件里面的数据处理函数
         getShopData: function () {
@@ -44,15 +46,33 @@ var shopCar = (function () {
                 }
                 // 将商品添加到数组里面，最后渲染
                 arr.push(`<div class="shopBox">
+                             <img src="${shop.img}">
                             <p>商品名称：<span class="shop-name">${shop.name}</span></p>
                             <p>商品价格：<span class="shop-price">${shop.price}</span></p>
-                            数量：<input type="number" value="${data[i].count}">
+                            数量：<input type="number" value="${data[i].count}" class="shop-count">
                             <p>商品总价：<span class="shop-total">${data[i].count*shop.price}</span></p>
                             <p>商品提示：<span class="shop-tips">${shop.ps}</span></p>
                             <button class="btn shop-del">删除</button>
                         </div>`);
             }
             this.$ele.innerHTML = arr.join('');
+        },
+        eleInpFn:function(){
+            this.e = window.event;
+            var target = this.e.target || this.e.srcElement;
+            if(target.className == 'shop-count'){
+                // 改变数量，总价同时改变
+                var totalEle = target.parentNode.querySelector('.shop-total');
+                var total = target.value * target.parentNode.querySelector('.shop-price').innerHTML;
+                totalEle.innerHTML = total;
+            }
+        },
+        eleCliFn:function(){
+            this.e = window.event;
+            var target = this.e.target || this.e.srcElement;
+            if(target.className == 'btn shop-del'){
+                target.parentNode.remove();
+            }
         }
     }
 }());

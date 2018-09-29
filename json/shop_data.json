@@ -5,28 +5,32 @@
             "name": "牙刷",
             "price": 25,
             "color": "yellow",
-            "ps": "这个牙刷是爆款"
+            "ps": "这个牙刷是爆款",
+            "img":"images/img.jpg"
         },
         {
             "id": 2,
             "name": "牙膏",
             "price": 36,
             "color": "blue",
-            "ps": "用的人都说好"
+            "ps": "用的人都说好",
+            "img":"images/img.jpg"
         },
         {
             "id": 3,
             "name": "毛巾",
             "price": 20,
             "color": "yellow",
-            "ps": "很软,很柔"
+            "ps": "很软,很柔",
+            "img":"images/img.jpg"
         },
         {
             "id": 4,
             "name": "脸盆",
             "price": 10,
             "color": "white",
-            "ps": "很钢,很结实"
+            "ps": "很钢,很结实",
+            "img":"images/img.jpg"
         }
     ]
 }
